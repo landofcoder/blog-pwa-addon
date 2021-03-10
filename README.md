@@ -12,4 +12,4 @@ The addons require setup backend magento 2 extensions:
 - https://github.com/landofcoder/module-blog-graph-ql
 
 ## Demo Blog Pro
-![Landofcoder Demo Blog Pro PWA](https://demo-pwa.landofcoder.com/blog.html)
+https://demo-pwa.landofcoder.com/blog.html
