@@ -8,7 +8,7 @@ import TagList from '../tagList';
 import TopicList from '../topicList';
 import SidebarPosts from '../sidebarPosts';
 import SimibarMonthlyListing from '../simibarMonthlyListing';
-import { Title, Meta } from '@landofcoder/yume-ui/src/components/Head';
+import { Title, Meta } from '@magento/venia-ui/lib/components/Head';
 import { useLocation, useParams } from "react-router-dom";
 import RecentComments from '../recentComments';
 

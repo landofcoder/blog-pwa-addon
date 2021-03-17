@@ -3,7 +3,7 @@ import classes from './topicList.css'
 import { GET_BLOG_TOPICS } from '../../talons/Blog.gql'
 import { useQuery } from '@apollo/client';
 import { Link } from '@magento/venia-drivers';
-import Icon from '@landofcoder/yume-ui/src/components/Icon';
+import Icon from '@magento/venia-ui/lib/components/Icon';
 import { Folder as FolderIc } from 'react-feather';
 
 const folderIcon = <Icon src={FolderIc} attrs={{ width: 13 }} />;

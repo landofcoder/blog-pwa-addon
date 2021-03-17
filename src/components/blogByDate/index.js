@@ -1,4 +1,4 @@
-import { Title } from '@landofcoder/yume-ui/src/components/Head'
+import { Title } from '@magento/venia-ui/lib/components/Head'
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import BlogListing from '../blogListing'

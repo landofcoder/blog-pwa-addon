@@ -1,7 +1,7 @@
 import React from 'react'
 import { GET_RECENT_COMMENTS } from '../talons/Blog.gql'
 import { useQuery } from '@apollo/client'
-import LoadingIndicator from '@landofcoder/yume-ui/src/components/LoadingIndicator'
+import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator'
 
 export const useRecentComment = props => {
     const {

@@ -1,5 +1,5 @@
 export const listBlogs = () => {
-    let blogs = {
+    const blogs = {
         items: [],
         total_count: 0
     };

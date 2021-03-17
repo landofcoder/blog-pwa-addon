@@ -21,7 +21,7 @@ const TagList = () => {
     if (tagListData && tagListData.lofBlogTagList && tagListData.lofBlogTagList.items) {
         const tagItems = tagListData.lofBlogTagList.items;
         const maxFontSize = 26;
-        let postNumber = 1;
+        const postNumber = 1;
         // tagItems.map(tagItem => {
         //     try {
         //         const itemPostNum = tagItem.posts.items.length;;
@@ -39,7 +39,7 @@ const TagList = () => {
                 <div className={classes.tagListHeader}>{`Tags`}</div>
                 <div className={classes.tagItems}>
                     {tagItems.map((tagItem, index) => {
-                        let tagFontSize = 10;
+                        const tagFontSize = 10;
                         // try {
                         //     tagFontSize = maxFontSize * parseInt(tagItem.post.items?.length) / postNumber;
                         //     tagFontSize = (Math.ceil(tagFontSize) + 8);

@@ -8,7 +8,7 @@ import TagList from '../tagList';
 import TopicList from '../topicList';
 import SidebarPosts from '../sidebarPosts';
 import SimibarMonthlyListing from '../simibarMonthlyListing';
-import { Title, Meta } from '@landofcoder/yume-ui/src/components/Head';
+import { Title, Meta } from '@magento/venia-ui/lib/components/Head';
 import { Util } from '@magento/peregrine';
 import RecentComments from '../recentComments';
 const { BrowserPersistence } = Util;
@@ -32,7 +32,7 @@ const Home = props => {
         if (simiBlogConfiguration.general.name)
             titleName = simiBlogConfiguration.general.name
     }
-    const cateTree = useMemo(() => <CateTree categoryId={categoryId} selectCategory={selectCategory}/>, [])
+    const cateTree = useMemo(() => <CateTree categoryId={categoryId} selectCategory={selectCategory}/>, [categoryId, selectCategory])
     return (
         <div className={classes.mainCtn}>
             <Title>{title}</Title>

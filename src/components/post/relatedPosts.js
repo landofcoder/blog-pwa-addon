@@ -7,7 +7,6 @@ import { useWindowSize } from '@magento/peregrine';
 
 const RelatedPosts = props => {
     const { classes, items } = props;
-    const base_media_url = props.base_media_url!==undefined?props.base_media_url:"https://magento2.landofcoder.com/media/"
     const windowSize = useWindowSize();
     const isPhone = windowSize.innerWidth < 768;
     const itemPerRow = isPhone ? 1 : 3;
@@ -16,7 +15,7 @@ const RelatedPosts = props => {
     items.map((item, index) => {
         currentRow.push(
             <div className={`${classes.relatedPostItem} ${isPhone ? classes.isPhone : ''}`} key={index}>
-                <div style={{ backgroundImage: `url("${base_media_url+item.image}")` }} className={classes.blogrelatedPostImage} />
+                <div style={{ backgroundImage: `url("https://magento2.landofcoder.com/media/${item.image}")` }} className={classes.blogrelatedPostImage} />
                 <Link to={`/blog/post/${item.identifier}.html`} >
                     <div className={classes.relatedPostName}>{item.title}</div>
                 </Link>

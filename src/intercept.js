@@ -14,7 +14,7 @@
 module.exports = targets => {
   // Wrap the talon with this extension
 
-//   const peregrineTargets = targets.of('@landofcoder/yume-ui');
+//   const peregrineTargets = targets.of('@magento/venia-ui');
 //   const talonsTarget = peregrineTargets.talons;
 
   // Set the buildpack features required by this extension
@@ -27,7 +27,7 @@ module.exports = targets => {
   });
 
 
-  targets.of('@landofcoder/yume-ui').routes.tap(routes => {
+  targets.of('@magento/venia-ui').routes.tap(routes => {
     routes.push({
       name: 'BlogHome',
       pattern: '/blog.html',

@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from 'react'
 import { usePost } from '../../talons/usePost'
 import { useParams } from "react-router-dom";
 // import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator';
-import LoadingIndicator from '@landofcoder/yume-ui/src/components/LoadingIndicator';
+import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator';
 import classes from './postDetails.css';
-import { Title, Meta } from '@landofcoder/yume-ui/src/components/Head';
+import { Title, Meta } from '@magento/venia-ui/lib/components/Head';
 import BreadCrumb from '../breadcrumb/index';
 import SearchBlog from '../searchBlog';
 import CateTree from '../cateTree';
@@ -12,7 +12,7 @@ import TagList from '../tagList';
 import TopicList from '../topicList';
 import SidebarPosts from '../sidebarPosts';
 import SimibarMonthlyListing from '../simibarMonthlyListing';
-import RichContent from '@landofcoder/yume-ui/src/components/RichContent';
+import RichContent from '@magento/venia-ui/lib/components/RichContent';
 import BlogPostInfo from '../blogPostInfo';
 import RelatedPosts from './relatedPosts';
 import SharingBlock from '../sharingBlock';
@@ -73,7 +73,7 @@ const Post = props => {
         try {
             (function (d, s, id) {
                 if (!window.simiImportedFB) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
+                    var js; var fjs = d.getElementsByTagName(s)[0];
                     if (d.getElementById(id)) { return; }
                     js = d.createElement(s); js.id = id;
                     js.src = "//connect.facebook.net/en_US/sdk.js";

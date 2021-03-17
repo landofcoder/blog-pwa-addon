@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { mergeClasses } from '@landofcoder/yume-ui/src/classify';
+import { mergeClasses } from '@magento/venia-ui/lib/classify';
 import defaultClasses from './blogListing.css'
 import { useBlogListing } from '../../talons/useBlogListing'
-import LoadingIndicator from '@landofcoder/yume-ui/src/components/LoadingIndicator';
+import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator';
 import BlogListingItem from '../blogListingItem'
-import Pagination from '@landofcoder/yume-ui/src/components/Pagination';
+import Pagination from '@magento/venia-ui/lib/components/Pagination';
 import { Util } from '@magento/peregrine';
 import { listBlogs } from '../../data/blogs';
 const data = listBlogs();
@@ -15,7 +15,7 @@ const BlogListing = props => {
     const { filterType, filterValue } = props;
     const classes = mergeClasses(defaultClasses, props.classes);
     const talonProps = useBlogListing({ filterType, filterValue })
-    let {
+    const {
         blogData,
         blogLoading,
         blogError,

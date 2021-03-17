@@ -1,7 +1,5 @@
-import React, {useCallback, useMemo} from 'react';
+import React from 'react';
 import { useCateTree } from '../../talons/useCateTree'
-import DropdownTreeSelect from 'react-dropdown-tree-select'
-import 'react-dropdown-tree-select/dist/styles.css'
 import classes from './cateTree.css'
 import { useHistory } from '@magento/venia-drivers';
 import Dropdown from 'react-dropdown';

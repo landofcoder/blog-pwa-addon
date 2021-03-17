@@ -3,9 +3,9 @@ import classes from './style.css'
 import { GET_BLOG_ARCHIVE } from '../../talons/Blog.gql'
 import { useQuery } from '@apollo/client';
 import { Link } from '@magento/venia-drivers';
-import Icon from '@landofcoder/yume-ui/src/components/Icon';
+import Icon from '@magento/venia-ui/lib/components/Icon';
 import { Calendar as CalendarIc } from 'react-feather';
-import LoadingIndicator from '@landofcoder/yume-ui/src/components/LoadingIndicator';
+import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator';
 
 const calendarIcon = <Icon src={CalendarIc} attrs={{ width: 13 }} />;
 const months = [

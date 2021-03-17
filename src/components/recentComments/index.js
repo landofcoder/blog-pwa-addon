@@ -5,12 +5,12 @@ import { useQuery } from '@apollo/client';
 import { Link } from '@magento/venia-drivers';
 import { Util } from '@magento/peregrine';
 import { useRecentComment } from '../../talons/useRecentComment';
-import LoadingIndicator from '@landofcoder/yume-ui/src/components/LoadingIndicator';
+import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator';
 const { BrowserPersistence } = Util;
 const storage = new BrowserPersistence();
 
 const RecentComments = () => {
-    const { data: tagListData } = useQuery(GET_TAGS_LIST);
+    // const { data: tagListData } = useQuery(GET_TAGS_LIST);
     const { recentData, recentError, recentLoading } = useRecentComment();
     const simiBlogConfiguration = storage.getItem('simiBlogConfiguration');
     let linkColor = '#1ABC9C';
@@ -28,13 +28,13 @@ const RecentComments = () => {
         return <LoadingIndicator />;
     }
     if (
-        tagListData &&
-        tagListData.lofBlogTagList &&
-        tagListData.lofBlogTagList.items
+        recentData &&
+        recentData.lofBlogCommentList &&
+        recentData.lofBlogCommentList.items
     ) {
-        const tagItems = tagListData.lofBlogTagList.items;
-        const maxFontSize = 26;
-        let postNumber = 1;
+        // const tagItems = tagListData.lofBlogTagList.items;
+        // const maxFontSize = 26;
+        // let postNumber = 1;
         // tagItems.map(tagItem => {
         //     try {
         //         const itemPostNum = tagItem.posts.items.length;;

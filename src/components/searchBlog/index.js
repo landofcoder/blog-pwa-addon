@@ -2,9 +2,9 @@ import React from 'react'
 import { useSearchBox } from '../../talons/useSearchBox'
 import { Form } from 'informed';
 import classes from './search.css'
-import LoadingIndicator from '@landofcoder/yume-ui/src/components/LoadingIndicator';
+import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator';
 import { Link } from '@magento/venia-drivers';
-import Icon from '@landofcoder/yume-ui/src/components/Icon';
+import Icon from '@magento/venia-ui/lib/components/Icon';
 import { Search as SearchIc } from 'react-feather';
 
 const searchIcon = <Icon src={SearchIc} attrs={{ width: 16 }} />;
@@ -18,7 +18,7 @@ const SearchBlog = props => {
         setQuery
     } = useSearchBox()
 
-    let searchResult = [];
+    const searchResult = [];
     if (blogData && blogData.lofBlogList && blogData.lofBlogList.items) {
         blogData.lofBlogList.items.map((item, key) => {
             // const {

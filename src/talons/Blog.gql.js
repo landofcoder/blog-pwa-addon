@@ -793,12 +793,3 @@ export const GET_ARCHIVE_BLOGS_BY_DATE = gql`
     }
     ${BlogFragment}
 `;
-
-export const GET_BLOG_CONFIG = gql`
-    query getBlogStoreConfig() {
-        storeConfig() {
-            secure_base_media_url
-            base_media_url
-        }
-    }
-`

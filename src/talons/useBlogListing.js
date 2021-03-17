@@ -8,11 +8,11 @@ import {
 } from './Blog.gql'
 import { useQuery } from '@apollo/client';
 import { useToasts } from '@magento/peregrine';
-import Icon from '@landofcoder/yume-ui/src/components/Icon';
+import Icon from '@magento/venia-ui/lib/components/Icon';
 import { AlertCircle as AlertCircleIcon } from 'react-feather';
 import { usePagination } from '@magento/peregrine';
 import { useHistory } from '@magento/venia-drivers';
-import LoadingIndicator from '@landofcoder/yume-ui/src/components/LoadingIndicator';
+import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator';
 
 const errorIcon = <Icon src={AlertCircleIcon} attrs={{ width: 18 }} />;
 
@@ -103,7 +103,7 @@ export const useBlogListing = props => {
         return () => {
             setTotalPages(null);
         };
-    }, [blogData, totalPages, setTotalPages]);
+    }, [blogData, totalPages, setTotalPages, pageSize]);
     if (blogLoading) {
         return <LoadingIndicator/>
     }

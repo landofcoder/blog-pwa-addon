@@ -3,7 +3,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import LoadingIndicator from '@magento/venia-ui/lib/components/LoadingIndicator';
 import { GET_PRODUCTS_BY_SKUS } from '../../talons/Blog.gql';
 import { useQuery } from '@apollo/client';
-import GalleryItem from '@landofcoder/yume-ui/src/components/Gallery/item';
+import GalleryItem from '@magento/venia-ui/lib/components/Gallery/item';
 
 // map Magento 2.3.1 schema changes to Venia 2.0.0 proptype shape to maintain backwards compatibility
 const mapGalleryItem = item => {
@@ -17,7 +17,7 @@ const mapGalleryItem = item => {
 
 const RelatedProducts = props => {
     const { classes, items } = props;
-    let skus = [];
+    const skus = [];
     items.map(item => {
         skus.push(item.sku)
     })
@@ -33,7 +33,7 @@ const RelatedProducts = props => {
         return <LoadingIndicator />
     if (!productItems || !productItems.products || !productItems.products.items)
         return ''
-    let classesToItem = JSON.parse(JSON.stringify(classes));
+    const classesToItem = JSON.parse(JSON.stringify(classes));
     classesToItem.root = classes.relatedProductRoot;
     return (
         <div className={`${classes.relatedProducts} ${classes.detailsSection}`}>

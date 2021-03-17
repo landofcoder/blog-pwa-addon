@@ -5,7 +5,7 @@ import Icon from '@magento/venia-ui/lib/components/Icon';
 import { Calendar as CalendarIc, User as AuthorIc, Eye as EyeIc } from 'react-feather';
 
 import { Util } from '@magento/peregrine';
-// import { Link } from '@landofcoder/yume-ui/src/components/Head';
+// import { Link } from '@magento/venia-ui/lib/components/Head';
 const { BrowserPersistence } = Util;
 const storage = new BrowserPersistence();
 
