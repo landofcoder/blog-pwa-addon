@@ -33,10 +33,10 @@ const Category = props => {
     )
     if (resultLoading)
         return <LoadingIndicator />
-    if (!resultData || !resultData.mpBlogMonthlyArchive || !resultData.mpBlogMonthlyArchive.items || !resultData.mpBlogMonthlyArchive.items[0])
+    if (!resultData || !resultData.lofBlogMonthlyArchive || !resultData.lofBlogMonthlyArchive.items || !resultData.lofBlogMonthlyArchive.items[0])
         return 'Cannot find item';
 
-    const archiveData = resultData.mpBlogMonthlyArchive.items[0];
+    const archiveData = resultData.lofBlogMonthlyArchive.items[0];
 
     return (
         <div className={classes.mainCtn}>

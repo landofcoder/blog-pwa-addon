@@ -3,7 +3,7 @@ import { Link } from '@magento/venia-drivers';
 import RichText from '@magento/venia-ui/lib/components/RichText'
 
 const BlogListingItem = props => {
-    const { classes, item, simiBlogConfiguration } = props;
+    const { classes, item, lofBlogConfiguration } = props;
     const {
         title,
         identifier,
@@ -17,12 +17,12 @@ const BlogListingItem = props => {
         "gif"
     ]
     let linkColor = '#1ABC9C';
-    if (simiBlogConfiguration && simiBlogConfiguration.general && simiBlogConfiguration.general.font_color) {
-        linkColor = simiBlogConfiguration.general.font_color;
+    if (lofBlogConfiguration && lofBlogConfiguration.general && lofBlogConfiguration.general.font_color) {
+        linkColor = lofBlogConfiguration.general.font_color;
     }
     let displayStyle = 1;
-    if (simiBlogConfiguration && simiBlogConfiguration.general && simiBlogConfiguration.general.display_style) {
-        displayStyle = parseInt(simiBlogConfiguration.general.display_style);
+    if (lofBlogConfiguration && lofBlogConfiguration.general && lofBlogConfiguration.general.display_style) {
+        displayStyle = parseInt(lofBlogConfiguration.general.display_style);
     }
     return (
         <div className={`${classes.blogpostItem} ${displayStyle === 1 ? classes.blogpostItemList : classes.blogpostItemGrid}`}>

@@ -20,17 +20,17 @@ const Home = props => {
         setCategoryId(event.value)
         window.location.href = `/blog/category/${event.value}`
     }, [])
-    const simiBlogConfiguration = storage.getItem('simiBlogConfiguration');
+    const lofBlogConfiguration = storage.getItem('lofBlogConfiguration');
     let title = 'Blog'
     let description = ''
     let titleName = 'Blog'
-    if (simiBlogConfiguration && simiBlogConfiguration.seo && simiBlogConfiguration.general) {
-        if (simiBlogConfiguration.seo.meta_title)
-            title = simiBlogConfiguration.seo.meta_title
-        if (simiBlogConfiguration.seo.meta_description)
-            description = simiBlogConfiguration.seo.meta_description
-        if (simiBlogConfiguration.general.name)
-            titleName = simiBlogConfiguration.general.name
+    if (lofBlogConfiguration && lofBlogConfiguration.seo && lofBlogConfiguration.general) {
+        if (lofBlogConfiguration.seo.meta_title)
+            title = lofBlogConfiguration.seo.meta_title
+        if (lofBlogConfiguration.seo.meta_description)
+            description = lofBlogConfiguration.seo.meta_description
+        if (lofBlogConfiguration.general.name)
+            titleName = lofBlogConfiguration.general.name
     }
     const cateTree = useMemo(() => <CateTree categoryId={categoryId} selectCategory={selectCategory}/>, [categoryId, selectCategory])
     return (

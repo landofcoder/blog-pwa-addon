@@ -3,7 +3,7 @@ query storeConfigData {
         id
         copyright
     }
-    mpBlogConfigs {
+    lofBlogConfigs {
         general {
             name
             toplinks

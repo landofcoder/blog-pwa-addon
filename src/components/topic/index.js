@@ -31,10 +31,10 @@ const Topic = props => {
     )
     if (resultLoading)
         return <LoadingIndicator />
-    if (!resultData || !resultData.mpBlogTopics || !resultData.mpBlogTopics.items || !resultData.mpBlogTopics.items[0])
+    if (!resultData || !resultData.lofBlogTopics || !resultData.lofBlogTopics.items || !resultData.lofBlogTopics.items[0])
         return 'Cannot find item';
 
-    const topicData = resultData.mpBlogTopics.items[0];
+    const topicData = resultData.lofBlogTopics.items[0];
 
     return (
         <div className={classes.mainCtn}>

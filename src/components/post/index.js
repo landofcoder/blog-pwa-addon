@@ -103,10 +103,10 @@ const Post = props => {
     if (!resultData || !resultData.lofBlogList || !resultData.lofBlogList.items || !resultData.lofBlogList.items[0])
         return 'Cannot find item';
 
-    const simiBlogConfiguration = storage.getItem('simiBlogConfiguration');
+    const lofBlogConfiguration = storage.getItem('lofBlogConfiguration');
     let linkColor = '#1ABC9C';
-    if (simiBlogConfiguration && simiBlogConfiguration.general && simiBlogConfiguration.general.font_color) {
-        linkColor = simiBlogConfiguration.general.font_color;
+    if (lofBlogConfiguration && lofBlogConfiguration.general && lofBlogConfiguration.general.font_color) {
+        linkColor = lofBlogConfiguration.general.font_color;
     }
 
     const postData = resultData.lofBlogList.items[0];

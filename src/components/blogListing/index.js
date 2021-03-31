@@ -27,11 +27,11 @@ const BlogListing = props => {
     fake data
     */
     // blogData = data;
-    const simiBlogConfiguration = storage.getItem('simiBlogConfiguration');
+    const lofBlogConfiguration = storage.getItem('lofBlogConfiguration');
 
     let linkColor = '#1ABC9C';
-    if (simiBlogConfiguration && simiBlogConfiguration.general && simiBlogConfiguration.general.font_color) {
-        linkColor = simiBlogConfiguration.general.font_color;
+    if (lofBlogConfiguration && lofBlogConfiguration.general && lofBlogConfiguration.general.font_color) {
+        linkColor = lofBlogConfiguration.general.font_color;
     }
 
     useEffect(() => {
@@ -63,7 +63,7 @@ const BlogListing = props => {
             // }
             blogsWrapper = lofBlogList.posts.map((item, index) => 
                 <React.Fragment key={index}>
-                    <BlogListingItem classes={classes} item={item} key={item.post_id} simiBlogConfiguration={simiBlogConfiguration} />
+                    <BlogListingItem classes={classes} item={item} key={item.post_id} lofBlogConfiguration={lofBlogConfiguration} />
                 </React.Fragment>
             )
         }
@@ -74,7 +74,7 @@ const BlogListing = props => {
             }
             blogsWrapper = lofBlogList.posts.items.map((item, index) => (
                 <React.Fragment key={index}>
-                    <BlogListingItem classes={classes} item={item} key={item.post_id} simiBlogConfiguration={simiBlogConfiguration} />
+                    <BlogListingItem classes={classes} item={item} key={item.post_id} lofBlogConfiguration={lofBlogConfiguration} />
                 </React.Fragment>
             ))
         }
@@ -85,7 +85,7 @@ const BlogListing = props => {
             }
             blogsWrapper = blogData.lofBlogTagByAlias.posts.items.map((item, index) => (
                 <React.Fragment key={index}>
-                    <BlogListingItem classes={classes} item={item} key={item.post_id} simiBlogConfiguration={simiBlogConfiguration} />
+                    <BlogListingItem classes={classes} item={item} key={item.post_id} lofBlogConfiguration={lofBlogConfiguration} />
                 </React.Fragment>
             ))
         }
@@ -96,7 +96,7 @@ const BlogListing = props => {
             }
             blogsWrapper = lofBlogList.items.map((item, index) =>
                 <React.Fragment key={index}>
-                    <BlogListingItem classes={classes} item={item} key={item.post_id} simiBlogConfiguration={simiBlogConfiguration} />
+                    <BlogListingItem classes={classes} item={item} key={item.post_id} lofBlogConfiguration={lofBlogConfiguration} />
                 </React.Fragment>
             )
         }
@@ -132,7 +132,7 @@ const BlogListing = props => {
         )
     }
     return ''
-    // const mpBlogPosts = data;
+    // const lofBlogPosts = data;
     // return (
     //     <div className={classes.blogListingCtn} >
     //         {blogsWrapper}

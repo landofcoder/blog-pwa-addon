@@ -31,9 +31,9 @@ const BlogPostInfo = props => {
         author
     } = item
 
-    const simiBlogConfiguration = storage.getItem('simiBlogConfiguration');
+    const lofBlogConfiguration = storage.getItem('lofBlogConfiguration');
     let displayAuthor = false;
-    if (simiBlogConfiguration && simiBlogConfiguration.general && simiBlogConfiguration.general.display_author) {
+    if (lofBlogConfiguration && lofBlogConfiguration.general && lofBlogConfiguration.general.display_author) {
         displayAuthor = true;
     }
 

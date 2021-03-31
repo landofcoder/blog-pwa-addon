@@ -12,8 +12,8 @@ const BlogIcon = () => {
     const history = useHistory();
     const { formatMessage } = useIntl();
 
-    const simiBlogConfiguration = storage.getItem('simiBlogConfiguration');
-    if (simiBlogConfiguration && simiBlogConfiguration.general && simiBlogConfiguration.general.toplinks) {
+    const lofBlogConfiguration = storage.getItem('lofBlogConfiguration');
+    if (lofBlogConfiguration && lofBlogConfiguration.general && lofBlogConfiguration.general.toplinks) {
         return (
             <button
                 aria-label={formatMessage({

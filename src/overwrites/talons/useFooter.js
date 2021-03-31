@@ -10,8 +10,8 @@ const storage = new BrowserPersistence();
 export const useFooter = props => {
     const { query } = props;
     const { data } = useQuery(query);
-    if (data && data.mpBlogConfigs) {
-        storage.setItem('simiBlogConfiguration', data.mpBlogConfigs);
+    if (data && data.lofBlogConfigs) {
+        storage.setItem('lofBlogConfiguration', data.lofBlogConfigs);
     }
     return {
         copyrightText: data && data.storeConfig && data.storeConfig.copyright

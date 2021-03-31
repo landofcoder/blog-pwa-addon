@@ -145,7 +145,7 @@ const COMMENT_FRAGMENT = gql`
     }
 `;
 export const GET_BLOG_POSTS = gql`
-    query mpBlogPosts(
+    query lofBlogPosts(
         $action: String!
         $filter: PostsFilterInput
         $authorName: String
@@ -157,7 +157,7 @@ export const GET_BLOG_POSTS = gql`
         $pageSize: Int
         $currentPage: Int
     ) {
-        mpBlogPosts(
+        lofBlogPosts(
             action: $action
             filter: $filter
             authorName: $authorName
@@ -190,8 +190,8 @@ export const GET_BLOG_POSTS = gql`
 `;
 
 export const GET_SEARCH_BLOG_POST = gql`
-    query mpBlogPosts($query: String!) {
-        mpBlogPosts(
+    query lofBlogPosts($query: String!) {
+        lofBlogPosts(
             action: "get_post_list"
             filter: { name: { like: $query } }
         ) {
@@ -209,8 +209,8 @@ export const GET_SEARCH_BLOG_POST = gql`
 `;
 
 export const GET_BLOG_CATEGORIES = gql`
-    query mpBlogCategories {
-        mpBlogCategories(action: "get_category_list", pageSize: 999) {
+    query lofBlogCategories {
+        lofBlogCategories(action: "get_category_list", pageSize: 999) {
             items {
                 ...CategoryFragment
             }
@@ -220,8 +220,8 @@ export const GET_BLOG_CATEGORIES = gql`
 `;
 
 export const GET_BLOG_TAGS = gql`
-    query mpBlogTags {
-        mpBlogTags {
+    query lofBlogTags {
+        lofBlogTags {
             items {
                 ...TagFragment
                 posts {
@@ -248,8 +248,8 @@ export const GET_BLOG_TOPICS = gql`
 `;
 
 export const GET_SIDEBAR_BLOG_POSTS = gql`
-    query mpBlogPosts($sortBy: String, $pageSize: Int) {
-        mpBlogPosts(
+    query lofBlogPosts($sortBy: String, $pageSize: Int) {
+        lofBlogPosts(
             action: "get_post_list"
             sortBy: $sortBy
             pageSize: $pageSize
@@ -268,8 +268,8 @@ export const GET_SIDEBAR_BLOG_POSTS = gql`
 `;
 
 export const GET_CATE_BY_URL_KEY = gql`
-    query mpBlogCategories($url_key: String!) {
-        mpBlogCategories(
+    query lofBlogCategories($url_key: String!) {
+        lofBlogCategories(
             action: "get_category_list"
             filter: { url_key: { eq: $url_key } }
         ) {
@@ -282,8 +282,8 @@ export const GET_CATE_BY_URL_KEY = gql`
 `;
 
 export const GET_TOPIC_BY_URL_KEY = gql`
-    query mpBlogTopics($url_key: String!) {
-        mpBlogTopics(filter: { url_key: { eq: $url_key } }) {
+    query lofBlogTopics($url_key: String!) {
+        lofBlogTopics(filter: { url_key: { eq: $url_key } }) {
             items {
                 ...TopicFragment
             }
@@ -293,8 +293,8 @@ export const GET_TOPIC_BY_URL_KEY = gql`
 `;
 
 export const GET_TAG_BY_URL_KEY = gql`
-    query mpBlogTags($url_key: String!) {
-        mpBlogTags(filter: { url_key: { eq: $url_key } }) {
+    query lofBlogTags($url_key: String!) {
+        lofBlogTags(filter: { url_key: { eq: $url_key } }) {
             items {
                 ...TagFragment
             }
@@ -304,8 +304,8 @@ export const GET_TAG_BY_URL_KEY = gql`
 `;
 
 export const GET_BLOG_POST_BY_URL_KEY = gql`
-    query mpBlogPosts($url_key: String!) {
-        mpBlogPosts(
+    query lofBlogPosts($url_key: String!) {
+        lofBlogPosts(
             action: "get_post_list"
             filter: { url_key: { eq: $url_key } }
         ) {
@@ -359,8 +359,8 @@ export const GET_BLOG_POST_BY_URL_KEY = gql`
 `;
 
 export const GET_BLOG_ARCHIVE_DETAILS = gql`
-    query mpBlogMonthlyArchive($monthly: Int!, $year: Int!) {
-        mpBlogMonthlyArchive(monthly: $monthly, year: $year) {
+    query lofBlogMonthlyArchive($monthly: Int!, $year: Int!) {
+        lofBlogMonthlyArchive(monthly: $monthly, year: $year) {
             items {
                 label
                 quantity

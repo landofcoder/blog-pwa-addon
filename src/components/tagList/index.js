@@ -12,10 +12,10 @@ const TagList = () => {
         data: tagListData
     } = useQuery(GET_TAGS_LIST)
 
-    const simiBlogConfiguration = storage.getItem('simiBlogConfiguration');
+    const lofBlogConfiguration = storage.getItem('lofBlogConfiguration');
     let linkColor = '#1ABC9C';
-    if (simiBlogConfiguration && simiBlogConfiguration.general && simiBlogConfiguration.general.font_color) {
-        linkColor = simiBlogConfiguration.general.font_color;
+    if (lofBlogConfiguration && lofBlogConfiguration.general && lofBlogConfiguration.general.font_color) {
+        linkColor = lofBlogConfiguration.general.font_color;
     }
 
     if (tagListData && tagListData.lofBlogTagList && tagListData.lofBlogTagList.items) {
