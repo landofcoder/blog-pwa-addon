@@ -6,7 +6,7 @@ Moreover, you can also improve your marketing efforts and smoothly transfer prom
 
 ## Installation Environment
 Require magento 2.4.x or above.
-Require PWA studio version 8.0.x or above.
+Require PWA studio version 8.0.x or 8.1.x.
 The addons require setup backend magento 2 extensions:
 - https://landofcoder.com/magento-2-blog-extension.html/
 - Copy folder from https://github.com/landofcoder/module-blog-graph-ql to packages/extensions/
